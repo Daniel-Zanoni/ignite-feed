@@ -25,7 +25,6 @@ interface PostProps {
 }
 
 export function Post({ author, content, publishedAt }: PostProps) {
-    
     const [comments, setComments] = useState(['Post muito bacana, hein?!']);
     const [newCommentText, setNewCommentText] = useState('');
     const isNewCommentEmpty = newCommentText.length === 0;
@@ -112,8 +111,7 @@ export function Post({ author, content, publishedAt }: PostProps) {
                             onDeleteComment={deleteComment}
                         />
                     );
-                })
-               }
+                })}
             </div>
         </article>
     );
